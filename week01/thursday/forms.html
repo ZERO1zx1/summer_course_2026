@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>HTML Forms</h1>
+
+    <form action="">
+        <h2>Information</h2>
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="firstname" placeholder="Enter your first name" required>
+        <br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="lastname" placeholder="Enter your last name" required>
+        <br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="100">
+        <br>
+
+        <label for="search">Search inside form:</label>
+        <input type="search" id="search" name="search" placeholder="Search...">
+        <br>
+
+        <h2>Contact Information</h2>
+
+        <hr>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+        <br>
+
+        <h2>Hobbies</h2>
+        <label for="hobby1">Hobby 1:</label>
+        <input type="text" id="hobby1" name="hobby1">
+        <br>
+
+        <label for="hobby2">Hobby 2:</label>
+        <input type="text" id="hobby2" name="hobby2">
+        <br>
+
+        <label for="hobby3">Hobby 3:</label>
+        <input type="text" id="hobby3" name="hobby3">
+        <br>
+
+        <h2>Gender</h2>
+        <label for="male">Male: </label>
+        <input type="radio" id="male" name="gender" value="male">
+        <br>
+
+        <label for="female">Female: </label>
+        <input type="radio" id="female" name="gender" value="female">
+        <br>
+
+        <h2>Country</h2>
+        <label for="country">Country: </label>
+        <select name="country" id="country">
+            <option value="mongolia">Mongolia</option>
+            <option value="usa">USA</option>
+            <option value="japan">Japan</option>
+        </select>
+        <br>
+
+        <h2>Favorite Language</h2>
+        <label for="language">Language: </label>
+        <select name="language" id="language">
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="c++">C++</option>
+            <option value="c#">C#</option>
+            <option value="ruby">Ruby</option>
+            <option value="html">Html</option>
+            <option value="css">Css</option>
+        </select>
+        <br>
+
+        <h2>Other Input Types</h2>
+
+        <label for="time">Time: </label>
+        <input type="time" id="time" name="time">
+        <br>
+
+        <label for="date">Calendar: </label>
+        <input type="date" id="date" name="date">
+        <br>
+
+        <label for="color">Color: </label>
+        <input type="color" id="color" name="favcolor">
+        <br>
+
+        <label for="range">Range: </label>
+        <input type="range" id="range" name="points" min="0" max="100">
+        <br>
+
+        <label for="checkbox">Checkbox: </label>
+        <input type="checkbox" id="checkbox" name="subscribe" value="yes">
+        <br>
+
+        <h2>Text Area</h2>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your text here..."></textarea>
+        <br>
+
+        <label for="file">File: </label>
+        <input type="file" id="file" name="userfile">
+        <br><br>
+
+        <input type="submit" value="Submit Form">
+        <input type="reset" value="Reset Form">
+
+    </form>
+</body>
+
+</html>
