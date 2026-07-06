@@ -57,3 +57,7 @@ p {
 h2 {
     color: azure;
 }
+
+.strikethrough {
+    text-decoration: line-through;
+}
