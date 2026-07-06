@@ -1,0 +1,59 @@
+body {
+    background-color: lightblue;
+    background-image: url('https://i.pinimg.com/originals/e5/40/08/e54008fec896ec085da559cf537d6f32.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+p {
+    color: azure;
+    font-style: bold;
+}
+
+.author {
+    color: azure;
+    font-style: italic;
+}
+
+.uppercase-text {
+    color: azure;
+    text-transform: uppercase;
+}
+
+.capitalize-text {
+    color: azure;
+    text-transform: capitalize;
+}
+
+.line-through-text {
+    color: azure;
+    text-decoration: line-through;
+}
+
+.underline-text {
+    color: azure;
+    text-decoration: underline;
+}
+
+.my-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.my-link:hover {
+    color: black;
+}
+
+.my-link:visited {
+    color: yellow;
+    text-decoration: underline;
+}
+
+.lorem-text {
+    color: azure;
+    text-transform: capitalize;
+}
+
+h2 {
+    color: azure;
+}

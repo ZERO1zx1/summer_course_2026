@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light's Profile</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+
+        h1 {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 85%;
+        }
+
+        .socials, .tech-stack {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .socials img, .tech-stack img {
+            height: 28px;
+            border-radius: 4px;
+        }
+
+        .stats-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stats-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💫 About Me:</h1>
+    <h2>👋 Hi there, I'm Light! 🚀</h2>
+    <p>Би 16 настай, сонирхолтой төслүүд бүтээх эрмэлзэлтэй залуу хөгжүүлэгч байна. Одоогоор <strong>Discord Bot</strong> хөгжүүлэлт болон <strong>Вэб технологиуд</strong> дээр төвлөрөн ажиллаж байна.</p>
+
+    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
+
+    <h3>🛠️ Миний Технологийн Ур Чадвар (Tech Stack)</h3>
+    <ul>
+        <li><strong>Backend & Bots:</strong> Python (<code>discord.py</code> / <code>nextcord</code> / <code>disnake</code>)</li>
+        <li><strong>Frontend (Сурч байгаа):</strong> HTML5 | CSS3 | JavaScript</li>
+        <li><strong>Databases:</strong> MySQL | SQLite (Ботны өгөгдөл хадгалахад ашигладаг)</li>
+    </ul>
+
+    <h3>🤖 Миний Төслүүд & Зорилго</h3>
+    <ul>
+        <li>⚙️ <strong>Discord Бот хөгжүүлэлт:</strong> Өгөгдлийн сантай холбогдсон, ухаалаг, автоматжуулалтын ботууд хийх дуртай.</li>
+        <li>🌐 <strong>Вэб хөгжүүлэлт:</strong> Суулгасан вэб технологио ашиглан өөрийн ботуудад зориулсан Dashboard хийж сурахыг зорьж байна.</li>
+    </ul>
+
+    <h2>🌐 Socials:</h2>
+    <div class="socials">
+        <a href="https://facebook.com/Ууганбаяр Л." target="_blank">
+            <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/uuganaazero1" target="_blank">
+            <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram">
+        </a>
+        <a href="mailto:hotaruhoshi24@gmail.com">
+            <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email">
+        </a>
+    </div>
+
+    <h2>💻 Tech Stack:</h2>
+    <div class="tech-stack">
+        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
+        <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+    </div>
+
+    <h2>📊 GitHub Stats:</h2>
+    <div class="stats-container">
+        <img src="https://github-readme-stats.shion.dev/api?username=ZERO1zx1&theme=dark&hide_border=false&include_all_commits=true&count_private=true" alt="GitHub Stats">
+        <img src="https://streak-stats.demolab.com/?user=ZERO1zx1&theme=dark&hide_border=false" alt="GitHub Streak">
+        <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=ZERO1zx1&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages">
+    </div>
+
+    <div class="footer">
+        <div class="quote">
+            <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" style="max-width: 100%;">
+        </div>
+        <div class="visitor">
+            <a href="https://visitcount.itsvg.in" target="_blank">
+                <img src="https://komarev.com/ghpvc/?username=ZERO1zx1&icon=0&color=0" alt="Visitor Count">
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
