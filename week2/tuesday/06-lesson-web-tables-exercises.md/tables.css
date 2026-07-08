@@ -1,0 +1,124 @@
+/* Ерөнхий загварчилгаа */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #333;
+    margin-top: 30px;
+}
+
+table {
+    border-collapse: separate;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+th,
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Дасгал 5 ба 6-д зориулсан тусгай өндөр, өргөн */
+.exercise-5 td,
+.exercise-6 td {
+    color: black;
+    font-weight: bold;
+}
+
+.exercise-6 tr:first-child td {
+    height: 100px;
+}
+
+.exercise-6 tr:last-child td {
+    height: 100px;
+    width: 150px;
+}
+
+/* Дасгал 7: Номын хүснэгт */
+.books-table {
+    width: 600px;
+    border: 3px double #000;
+}
+
+.books-table th {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.books-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Дасгал 8: Вэб хуудасны бүтэц */
+.layout-table {
+    width: 700px;
+    background-color: #FFFDE7;
+}
+
+.layout-table td {
+    padding: 15px;
+    font-weight: bold;
+    border: 1px solid #555;
+}
+
+.logo-cell {
+    width: 25%;
+}
+
+.top-menu-cell {
+    width: 75%;
+}
+
+.side-menu-cell {
+    height: 120px;
+}
+
+.ads-cell {
+    width: 20%;
+}
+
+.footer-cell {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Дасгал 9: Хичээлийн хуваарь */
+.timetable {
+    width: 650px;
+    background-color: #E8F5E9;
+    border: 2px solid #2E7D32;
+}
+
+.timetable th {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #C8E6C9;
+}
+
+.timetable td {
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    background-color: #ffffff;
+}
+
+.timetable .hours-cell {
+    background-color: #C8E6C9;
+    font-weight: bold;
+    width: 15%;
+}
+
+.timetable .lunch-cell {
+    background-color: #C8E6C9;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timetable .project-cell {
+    font-weight: bold;
+    background-color: #ffffff;
+}
