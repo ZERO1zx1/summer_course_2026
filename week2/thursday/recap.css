@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1e293b;
+    padding: 20px;
+    min-height: 100vh;
+    background: url('./images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 30px 0 16px 0;
+    color: #0f172a;
+}
+
+h2 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+.card {
+    max-width: 480px;
+    margin: 20px auto;
+    padding: 28px 32px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #3b82f6;   /* цэнхэр дээд зурвас */
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;   
+    color: #0f172a;
+}
+
+.card-role {
+    color: #f46e55;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0; 
+    font-size: 15px;
+}
+
+/* Биографи */
+.card-bio {
+    color: #64748b;
+    line-height: 1.6;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    max-width: 700px;
+    margin: 10px auto 0;
+}
+
+.skill-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 100px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#skill-python  { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+#skill-mysql   { background: linear-gradient(135deg, #4a90d9, #1e3799); }
+#skill-discord { background: linear-gradient(135deg, #55efc4, #00b894); }
+#skill-html    { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+#skill-css     { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    max-width: 900px;
+    margin: 10px auto 30px;
+}
+
+.gallery img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: 20px 18px;
+        margin: 16px 10px;
+    }
+
+    .card-name {
+        font-size: 19px;
+    }
+
+    .skill-box {
+        width: 90px;
+        height: 80px;
+        font-size: 1.1rem;
+    }
+
+    .gallery img {
+        max-width: 140px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
