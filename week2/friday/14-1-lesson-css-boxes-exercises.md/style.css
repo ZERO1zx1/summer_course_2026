@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px dashed #ccc;
+}
+
+.ex1-box {
+    background-color: blue;
+    width: 300px;
+    height: 200px;
+    color: white;
+    padding: 10px;
+}
+
+.ex2-box {
+    max-width: 500px;
+    max-height: 300px;
+    background-color: lightcoral;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.ex3-box {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.ex4-box {
+    height: 300px;
+    width: 400px;
+    background-color: lightblue;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.ex5-outer {
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.ex5-inner {
+    height: 150px;
+    overflow-y: auto;
+    background-color: #ddd;
+    padding: 10px;
+    overscroll-behavior: contain;
+}
+
+.ex6-container {
+    display: flex;
+    gap: 10px;
+}
+
+.ex6-column {
+    flex: 1;
+    background-color: plum;
+    padding: 20px;
+    text-align: center;
+}
+
+.ex7-box {
+    max-width: 400px;
+    min-width: 200px;
+    background-color: gold;
+    padding: 20px;
+}
+
+.ex8-box {
+    max-height: 300px;
+    min-height: 100px;
+    background-color: salmon;
+    overflow: auto;
+    padding: 20px;
+}
+
+.ex9-container {
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #333;
+}
+
+.ex9-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ex10-box {
+    max-width: 300px;
+    background-color: powderblue;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+}

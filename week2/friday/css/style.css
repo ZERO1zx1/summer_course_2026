@@ -1,0 +1,18 @@
+main {
+    width: 800px;
+    height: 600px;
+    background-color: #f4f6f9;
+    color: rgb(0, 0, 0);
+    margin: auto;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+p {
+    padding: 10px;
+    border: 2px solid #ff6b6b;
+    margin: 50px;
+}

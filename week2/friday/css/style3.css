@@ -1,0 +1,13 @@
+main {
+    height: 500px;
+    width: 500px;
+    background-color: yellowgreen;
+}
+
+.box {
+    width: 500px;
+    height: 300px;
+    background-color: gray;
+    overflow: scroll;
+    text-align: center;
+}

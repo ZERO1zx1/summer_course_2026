@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model - Дасгалууд</title>
+    <link rel="stylesheet" href="style.css">
+<base target="_blank">
+</head>
+<body>
+
+    <h1>🎨 CSS Layout - Дасгалууд (Хичээл 14-1)</h1>
+
+    <h2>Дасгал 1: Width & Height</h2>
+    <div class="section">
+        <div class="ex1-box">
+            Энэ div 300px өргөн, 200px өндөртэй, арын өнгө нь хөх.
+        </div>
+    </div>
+
+    <h2>Дасгал 2: Max-width & Max-height</h2>
+    <div class="section">
+        <div class="ex2-box">
+            This is a box with a maximum width of 500px and a maximum height of 300px. 
+            This is a box with a maximum width of 500px and a maximum height of 300px. 
+            This is a box with a maximum width of 500px and a maximum height of 300px. 
+            This is a box with a maximum width of 500px and a maximum height of 300px. 
+            This is a box with a maximum width of 500px and a maximum height of 300px. 
+            This is a box with a maximum width of 500px and a maximum height of 300px. 
+            This is a box with a maximum width of 500px and a maximum height of 300px.
+        </div>
+    </div>
+
+    <h2>Дасгал 3: Overflow Hidden</h2>
+    <div class="section">
+        <div class="ex3-box">
+            This is a box with a fixed width and height, and the content inside is overflowing. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            This is a box with a fixed width and height, and the content inside is overflowing. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+    </div>
+
+    <h2>Дасгал 4: Overflow-y Scroll</h2>
+    <div class="section">
+        <div class="ex4-box">
+            <p>This is a scrollable box with a fixed height. Add more content here to see the scrollbar.</p>
+            <p>This is a scrollable box with a fixed height. Add more content here to see the scrollbar.</p>
+            <p>This is a scrollable box with a fixed height. Add more content here to see the scrollbar.</p>
+            <p>This is a scrollable box with a fixed height. Add more content here to see the scrollbar.</p>
+            <p>This is a scrollable box with a fixed height. Add more content here to see the scrollbar.</p>
+            <p>This is a scrollable box with a fixed height. Add more content here to see the scrollbar.</p>
+            <p>This is a scrollable box with a fixed height. Add more content here to see the scrollbar.</p>
+        </div>
+    </div>
+
+    <h2>Дасгал 5: Overscroll Chaining</h2>
+    <div class="section">
+        <div class="ex5-outer">
+            <p>Гадна хайрцаг (Outer) - доош гүйлгээрэй.</p>
+            <div class="ex5-inner">
+                <p>Дотор хайрцаг (Inner) - энэ хэсгийг доош гүйлгэхэд гадна хайрцаг хөдлөхгүй.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Pellentesque consequat leo eu odio feugiat luctus.</p>
+                <p>Duis vel sagittis ipsum, non dictum nisl.</p>
+                <p>Vivamus sit amet volutpat metus.</p>
+                <p>Nunc tempus, mi ut vehicula porttitor.</p>
+                <p>Velit lacus sagittis lorem, sit amet venenatis mauris.</p>
+            </div>
+            <p>Гадна хайрцагийн доод хэсэг.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Pellentesque consequat leo eu odio feugiat luctus.</p>
+        </div>
+    </div>
+
+    <h2>Дасгал 6: 3 Багана (Тус бүр 1/3 өргөн)</h2>
+    <div class="section">
+        <div class="ex6-container">
+            <div class="ex6-column">Column 1<br>Content here</div>
+            <div class="ex6-column">Column 2<br>Content here</div>
+            <div class="ex6-column">Column 3<br>Content here</div>
+        </div>
+    </div>
+
+    <h2>Дасгал 7: Max-width (400px) & Min-width (200px)</h2>
+    <div class="section">
+        <div class="ex7-box">
+            Хөтөчийн цонхыг өргөсгөж/багасгахад энэ хайрцаг 200px-400px хооронд хэлбэлзэнэ.
+        </div>
+    </div>
+
+    <h2>Дасгал 8: Max-height (300px) & Min-height (100px)</h2>
+    <div class="section">
+        <div class="ex8-box">
+            Агуулга багахан байхад 100px, их байхад 300px хүртэл өндөртэй.
+        </div>
+    </div>
+
+    <h2>Дасгал 9: Responsive Image (100% width, auto height)</h2>
+    <div class="section">
+        <div class="ex9-container">
+            <img src="https://picsum.photos/1200" alt="Sample Image">
+        </div>
+    </div>
+
+    <h2>Дасгал 10: Overflow-x (Horizontal Scroll)</h2>
+    <div class="section">
+        <div class="ex10-box">
+            This is a content box with a vertical scrollbar when the text exceeds the width. Resize the window to see the effect!
+        </div>
+    </div>
+
+</body>
+</html>
