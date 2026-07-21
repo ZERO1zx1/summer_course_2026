@@ -1,0 +1,19 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.412);
+    padding: 12px 20px;
+}
+
+.navbar li {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin-right: 6px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    list-style: none;
+    display: inline;
+}
+
+.navbarv li:hover {
+    background-color: rgb(0, 0, 0);
+}
