@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.exercise-section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    display: flex;
+    width: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.471);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.ex1-container {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #fff;
+}
+
+.ex1-button-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.ex2-container {
+    position: relative;
+    display: inline-block;
+}
+
+.ex2-container img {
+    display: block;
+}
+
+.ex2-caption {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    background-color: yellow;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ex3-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.ex3-nav li {
+    float: left;
+}
+
+.ex3-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ex3-nav li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.ex4-scroll-box {
+    height: 300px;
+    overflow-y: scroll;
+    border: 2px solid #555;
+    position: relative;
+}
+
+.ex4-header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 10;
+}
+
+.ex4-footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 10;
+}
+
+.ex4-content {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.ex5-container {
+    position: relative;
+    height: 250px;
+}
+
+.ex5-box-blue {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.ex5-box-red {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #e74c3c;
+    z-index: 2;
+    top: 30px;
+    left: 30px;
+}
+
+.ex6-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.ex6-block {
+    display: block;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.ex6-inline {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.ex7-container {
+    position: relative;
+}
+
+.ex7-block {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.ex7-inline {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+}
+
+.ex7-stack {
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    background-color: green;
+    color: black;
+    padding: 10px;
+    z-index: 5;
+}
+
+.ex8-text {
+    font-size: 24px;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .ex8-text {
+        color: red;
+        font-size: 16px;
+    }
+}
+
+.ex9-body-sim {
+    background-color: blue;
+    padding: 50px 20px;
+}
+
+.ex9-content {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: gray;
+    color: white;
+    padding: 20px;
+}
+
+.ex10-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.ex10-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ex10-header {
+    background-color: rgba(0, 0, 255, 0.548);
+    color: white;
+}
+
+.ex10-content {
+    background-color: rgba(255, 255, 0, 0.455);
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.ex10-footer {
+    background-color: red;
+    color: white;
+}
+
+.ex10-text {
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .ex10-text {
+        font-size: 14px;
+    }
+
+    .ex10-content {
+        background-color: orange;
+    }
+}

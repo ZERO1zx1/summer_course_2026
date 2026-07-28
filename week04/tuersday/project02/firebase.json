@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "summer-course-2026-light-f36c1-4b4c8",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
