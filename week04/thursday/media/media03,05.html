@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 16px;
+        }
+
+        .sidebar {
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 767px) {
+            .sidebar {
+                display: none;
+            }
+        }
+
+        .box {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 24px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .row {
+                display: flex;
+                gap: 8px;
+            }
+
+            .box {
+                flex: 1;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Leaderboard</h1>
+    <p>Main content stays visible on every screen.</p>
+    <div class="sidebar">Sidebar: only visible on wide screens.</div>
+    <br></br>
+    <div class="row">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+
+</body>
+
+</html>

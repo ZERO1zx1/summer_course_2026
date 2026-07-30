@@ -1,0 +1,23 @@
+body {
+    font: arial, helvetica, sans-serif;
+    padding: 16px;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+@media (min-wdth: 768px) {
+    .badge {
+        background-color: chocolate;
+    }
+}
+
+@media (min-width: 1024px) {
+    .badge {
+        background-color: green;
+    }
+}
