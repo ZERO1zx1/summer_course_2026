@@ -1,0 +1,112 @@
+/* Дэлгэцийн ерөнхий тохиргоо */
+body {
+    background-color: #f4f6f9;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 1. Картуудыг зэрэгцүүлж байрлуулах үндсэн сав */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 багана хэвтээгээрээ зэрэгцэнэ */
+    gap: 20px;                             /* Хоорондын зай */
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 2. Нийтлэг картын стиль */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Зөөлөн томрох хөдөлгөөн */
+    position: relative;
+}
+
+/* Эхний бичсэн өнгөнүүдийг чинь арай зөөлөн харагдуулахаар засав */
+.basic {
+    background-color: #e0f7fa; /* Aqua-гийн арай зөөлөн өнгө */
+}
+
+.pro {
+    background-color: #fff3e0; /* Bisque-гийн арай зөөлөн өнгө */
+    border: 2px solid #ff9800; /* Онцлох хүрээ */
+}
+
+.premium {
+    background-color: #f3e5f5;
+}
+
+/* 3. PRO Карт дээр хулгана очиход томордог эффект */
+.pro:hover {
+    transform: scale(1.05); /* 5% томорно */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Сүүдэр тодорно */
+}
+
+/* 4. "Онцлох" тэмдэглэгээ (Badge) */
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #ff9800;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 5. Үнэ болон жагсаалтын стиль */
+.price {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 14px;
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.disabled {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+/* 6. Товчлуурын стиль */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-pro {
+    background-color: #ff9800;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}

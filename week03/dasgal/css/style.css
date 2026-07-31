@@ -1,0 +1,40 @@
+/* Дэлгэцийн ар талыг бэлдэж, карталгааг голлуулах */
+body {
+    display: flex;
+    justify-content: center; /* Хэвтээ чиглэлд голлуулах */
+    align-items: center;     /* Босоо чиглэлд голлуулах */
+    min-height: 100vh;       /* Дэлгэцийн бүтэн өндөр */
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+/* Картын стиль */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;                  /* Өнцөг дугуйруулах */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Сүүдэр оруулах */
+    width: 300px;                         /* Картын өргөн */
+    text-align: center;                   /* Текстүүдийг голлуулах */
+}
+
+/* Зургийн стиль */
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Зургийг бөөрөнхий болгох */
+    object-fit: cover;
+}
+
+/* Жагсаалтын стилийг цэгцлэх */
+.card ul {
+    list-style: none; /* Урд талын цэгийг арилгах */
+    padding: 0;
+}
+
+.card li {
+    background-color: #e4e6eb;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
