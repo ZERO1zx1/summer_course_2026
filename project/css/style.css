@@ -1,0 +1,635 @@
+/* ================= ҮНДСЭН ТОХИРГОО & ФОНТ ================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Нүүр хуудас дотор зөөлөн скролл хийх */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Үндсэн контейнер (1440px өргөнтэй) */
+.home {
+    position: relative;
+    width: 1440px;
+    height: 3174px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+/* ================= 1. НАВИГАЦИ (NAVBAR) ================= */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 127px;
+    position: absolute;
+    width: 1440px;
+    height: 85px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 9px 15px rgba(8, 128, 0, 0.04);
+    z-index: 100;
+}
+
+.alkusr-portofolio {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #75C310;
+}
+
+.frame-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 46px;
+}
+
+.nav-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.home-link {
+    color: #000000;
+}
+
+.about-link,
+.design-link,
+.illustration-link {
+    color: #75C310;
+}
+
+.nav-item:hover {
+    opacity: 0.8;
+}
+
+.group-1 {
+    position: relative;
+    width: 149px;
+    height: 45px;
+}
+
+.rectangle-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #75C310;
+    border-radius: 30px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.contact-me {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.group-1:hover .rectangle-1,
+.group-1-btn:hover .rectangle-1,
+.group-1-btn-center:hover .rectangle-1 {
+    background-color: #63a70d;
+}
+
+/* ================= 2. HERO 1 ХЭСЭГ ================= */
+.hero-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 127px;
+    position: absolute;
+    width: 1440px;
+    height: 697px;
+    top: 85px;
+    background: #FFFFFF;
+}
+
+.group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 429px;
+}
+
+.endless-creativity {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: #000000;
+}
+
+.expectation-text {
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.frame-1-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 54px;
+    background: #75C310;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.frame-1-btn:hover {
+    background-color: #63a70d;
+}
+
+.go-to-portofolio {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Hero 1 болон 2 дээр гарах үндсэн зураг */
+.artboard2-02-1 {
+    width: 514px;
+    height: 513px;
+    background: url('../images/Artboard2-02.png') no-repeat center;
+    background-size: contain;
+}
+
+/* ================= 3. HERO 2 ХЭСЭГ ================= */
+.hero-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 127px;
+    position: absolute;
+    width: 1440px;
+    height: 697px;
+    top: 773px;
+}
+
+.group-2-hero2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    width: 568px;
+    gap: 20px;
+}
+
+.satisfaction-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: #000000;
+}
+
+.doubt-text {
+    width: 381px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.group-1-btn {
+    position: relative;
+    width: 184px;
+    height: 55px;
+    margin-top: 20px;
+}
+
+.group-1-btn .contact-me {
+    font-size: 20px;
+}
+
+/* ================= 4. HERO 3 ХЭСЭГ ================= */
+.hero-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 1440px;
+    height: 343px;
+    top: 1469px;
+}
+
+.frame-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.happy-clients {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #000000;
+}
+
+.happy-stories {
+    font-size: 20px;
+    color: #000000;
+}
+
+.group-1-btn-center {
+    position: relative;
+    width: 184px;
+    height: 55px;
+    margin-top: 10px;
+}
+
+.group-1-btn-center .contact-me {
+    font-size: 20px;
+}
+
+/* ================= 5. HERO 4 ХЭСЭГ (Картууд) ================= */
+.hero-4 {
+    position: absolute;
+    width: 1440px;
+    height: 893px;
+    top: 1812px;
+}
+
+.frame-10 {
+    display: flex;
+    gap: 50px;
+    padding: 20px 0 50px 127px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.group-3,
+.group-4,
+.group-5 {
+    position: relative;
+    width: 382px;
+    height: 583px;
+    flex: none;
+    transition: transform 0.3s ease;
+}
+
+.group-3:hover,
+.group-4:hover,
+.group-5:hover {
+    transform: translateY(-8px);
+}
+
+.rectangle-2,
+.rectangle-3,
+.rectangle-4 {
+    position: absolute;
+    width: 100%;
+    height: 485px;
+    bottom: 0;
+    background: #FFFFFF;
+    border: 3px solid #75C310;
+    border-radius: 22px;
+    box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mask-group {
+    position: absolute;
+    width: 227px;
+    height: 227px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.ceo-1,
+.ceo-2,
+.ceo-3 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Картуудын зураг (Замыг ../images/ болгон зассан) */
+.ceo-1 {
+    background-image: url('../images/man.png');
+}
+
+.ceo-2 {
+    background-image: url('../images/girl.png');
+}
+
+.ceo-3 {
+    background-image: url('../images/boy.png');
+}
+
+.surename-one,
+.surename-two,
+.surename-three {
+    position: absolute;
+    width: 100%;
+    top: 254px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    z-index: 2;
+}
+
+.lorem-ipsum {
+    position: absolute;
+    width: 297px;
+    top: 327px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    text-align: center;
+    z-index: 2;
+}
+
+.ceo-building-one,
+.ceo-building-two,
+.ceo-building-three {
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* ================= 6. FOOTER ================= */
+.footer {
+    position: absolute;
+    width: 1440px;
+    height: 469px;
+    top: 2705px;
+    background: #75C310;
+}
+
+/* Footer-ийн арын зураг */
+.avatar-03-1 {
+    position: absolute;
+    width: 1116px;
+    height: 1116px;
+    left: -369px;
+    top: -280px;
+    background: url('../images/Avatar-03.png') no-repeat;
+    background-size: cover;
+}
+
+.footerlink {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    position: absolute;
+    width: 377px;
+    right: 127px;
+    top: 91px;
+    text-align: right;
+}
+
+.footer-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.footer-contact,
+.footer-location {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.frame-9 {
+    display: inline-block;
+    padding: 9px 23px;
+    background: #FFFFFF;
+    border-radius: 29px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.frame-9:hover {
+    opacity: 0.9;
+}
+
+.back-home {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #3F6333;
+    text-decoration: none;
+}
+
+/* =======================================================
+   RESPONSIVE (МЕДИА КҮЭРИ) ТОХИРГОО
+   ======================================================= */
+
+/* 1. Ноутбук болон Жижиг дэлгэц (Max-width: 1440px) */
+@media (max-width: 1440px) {
+    .home {
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
+        min-height: 3174px;
+    }
+
+    .navbar,
+    .hero-1,
+    .hero-2,
+    .hero-3,
+    .hero-4,
+    .footer {
+        width: 100%;
+    }
+}
+
+/* 2. Планшет / Tablet (Max-width: 1024px) */
+@media (max-width: 1024px) {
+
+    /* Паддинг хэмжээнүүдийг багасгах */
+    .navbar,
+    .hero-1,
+    .hero-2,
+    .hero-3 {
+        padding: 0 40px;
+    }
+
+    .frame-10 {
+        padding-left: 40px;
+    }
+
+    /* Фонт болон зургийн хэмжээг тохируулах */
+    .endless-creativity,
+    .satisfaction-text,
+    .happy-clients {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .artboard2-02-1 {
+        width: 380px;
+        height: 380px;
+    }
+
+    .footerlink {
+        right: 40px;
+    }
+}
+
+/* 3. Гар утас / Mobile (Max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Хатуу байршлуудыг болиулж, урсгал дагуу (Relative) болгох */
+    .home {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .navbar,
+    .hero-1,
+    .hero-2,
+    .hero-3,
+    .hero-4,
+    .footer {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    /* --- Navbar --- */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .frame-1 {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- Hero 1 --- */
+    .hero-1 {
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .group-2 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .endless-creativity,
+    .satisfaction-text,
+    .happy-clients {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .artboard2-02-1 {
+        width: 100%;
+        max-width: 320px;
+        height: 300px;
+    }
+
+    /* --- Hero 2 --- */
+    .hero-2 {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .group-2-hero2 {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .doubt-text {
+        width: 100%;
+    }
+
+    /* --- Hero 3 --- */
+    .hero-3 {
+        padding: 60px 20px;
+    }
+
+    /* --- Hero 4 (Картууд) --- */
+    .hero-4 {
+        padding: 40px 0;
+    }
+
+    .frame-10 {
+        padding-left: 20px;
+        gap: 20px;
+    }
+
+    .group-3,
+    .group-4,
+    .group-5 {
+        width: 300px;
+    }
+
+    /* --- Footer --- */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .avatar-03-1 {
+        display: none;
+        /* Гар утас дээр арын том чимэглэлийг нуух */
+    }
+
+    .footerlink {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
