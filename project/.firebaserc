@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "summer-course-2026-light-a55e5"
+  },
+  "targets": {
+    "summer-course-2026-light-a55e5": {
+      "hosting": {
+        "project": [
+          "profile-2"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
