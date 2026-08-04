@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Countryside Landscape</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+    }
+    canvas {
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      background: #87CEEB;
+    }
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .btn-daynight { background: #4A2511; color: #fff; }
+    .btn-wind     { background: #4A7C2A; color: #fff; }
+    .btn-deer     { background: #A67B5B; color: #fff; }
+  </style>
+</head>
+<body>
+
+  <canvas id="landscape" width="800" height="500"></canvas>
+
+  <div class="controls">
+    <button class="btn-daynight" onclick="toggleDayNight()">☀️ Day / Night 🌙</button>
+    <button class="btn-wind"     onclick="toggleWind()">💨 Toggle Wind</button>
+    <button class="btn-deer"     onclick="addDeer()">🦌 Add Deer</button>
+  </div>
+
+<script>
+  const canvas = document.getElementById('landscape');
+  const ctx    = canvas.getContext('2d');
+
+  let isNight   = false;
+  let windOn    = false;
+  let time      = 0;
+  let deerList  = [];
+
+  // Uulzuruud
+  const clouds = [
+    { x: 140, y: 110, r: [35,40,38,30], ox: [0,50,95,45] },
+    { x: 320, y: 165, r: [28,32,30,25], ox: [0,40,75,35] },
+    { x: 520, y: 105, r: [35,42,38,32,28], ox: [0,55,110,60,145] }
+  ];
+
+  function draw() {
+    time += 0.02;
+    ctx.clearRect(0, 0, 800, 500);
+
+    // === Tenger ===
+    ctx.fillStyle = isNight ? '#1a1a3e' : '#87CEEB';
+    ctx.fillRect(0, 0, 800, 500);
+
+    // === Od (shunu) ===
+    if (isNight) {
+      ctx.fillStyle = '#FFF';
+      for (let i = 0; i < 40; i++) {
+        let sx = (i * 137 + 53) % 800;
+        let sy = (i * 89 + 17) % 250;
+        ctx.globalAlpha = 0.5 + 0.5 * Math.sin(time + i);
+        ctx.beginPath(); ctx.arc(sx, sy, 1.5, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    // === Nar / Sar ===
+    ctx.strokeStyle = '#4A2511';
+    ctx.lineWidth   = 6;
+    ctx.fillStyle   = isNight ? '#F5F5F5' : '#F4D03F';
+    ctx.beginPath(); ctx.arc(720, 100, 55, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+
+    // === Uulzuruud ===
+    ctx.fillStyle = '#FFFFFF';
+    clouds.forEach((c, ci) => {
+      let wx = windOn ? Math.sin(time + ci) * 15 : 0;
+      c.ox.forEach((ox, i) => {
+        ctx.beginPath();
+        ctx.arc(c.x + ox + wx, c.y, c.r[i], 0, Math.PI * 2);
+        ctx.fill(); ctx.stroke();
+      });
+    });
+
+    // === Uulnuud ===
+    ctx.fillStyle = isNight ? '#4A3568' : '#7D5BA6';
+    ctx.lineJoin  = 'round';
+
+    ctx.beginPath(); ctx.moveTo(150,420); ctx.lineTo(280,140); ctx.lineTo(410,420); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(320,420); ctx.lineTo(480,80);  ctx.lineTo(640,420); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(550,420); ctx.lineTo(680,180); ctx.lineTo(810,420); ctx.closePath(); ctx.fill(); ctx.stroke();
+
+    // === Ovooluud ===
+    ctx.fillStyle = isNight ? '#3A5E2A' : '#6BAF4A';
+    ctx.beginPath(); ctx.moveTo(-20,350); ctx.quadraticCurveTo(180,280,380,360); ctx.quadraticCurveTo(520,300,720,340); ctx.quadraticCurveTo(820,360,820,420); ctx.lineTo(-20,420); ctx.closePath(); ctx.fill(); ctx.stroke();
+
+    ctx.fillStyle = isNight ? '#2E4D22' : '#5A9E3D';
+    ctx.beginPath(); ctx.moveTo(-20,400); ctx.quadraticCurveTo(200,340,400,390); ctx.quadraticCurveTo(600,350,820,400); ctx.lineTo(820,450); ctx.lineTo(-20,450); ctx.closePath(); ctx.fill(); ctx.stroke();
+
+    // === Bushes ===
+    ctx.fillStyle = isNight ? '#2A5A1E' : '#4A8C32';
+    [[160,360,140,40],[200,340,100,40],[420,370,160,40],[460,350,120,40]].forEach(b => {
+      ctx.beginPath(); ctx.roundRect(b[0], b[1], b[2], b[3], 20); ctx.fill(); ctx.stroke();
+    });
+
+    // === Gazartai heseg ===
+    ctx.fillStyle = isNight ? '#3A5E2A' : '#6BAF4A';
+    ctx.beginPath(); ctx.roundRect(60, 420, 680, 70, 2); ctx.fill(); ctx.stroke();
+
+    // === Moduud (zuun tal) ===
+    ctx.fillStyle = '#A67B5B';
+    ctx.fillRect(105,340,16,90); ctx.strokeRect(105,340,16,90);
+    ctx.fillRect(155,360,12,70); ctx.strokeRect(155,360,12,70);
+
+    ctx.fillStyle = isNight ? '#2A4A18' : '#4A7C2A';
+    ctx.beginPath(); ctx.arc(113,310,45,0,Math.PI*2); ctx.fill(); ctx.stroke();
+
+    ctx.fillStyle = isNight ? '#1E3A12' : '#3E6B24';
+    ctx.beginPath(); ctx.arc(161,340,32,0,Math.PI*2); ctx.fill(); ctx.stroke();
+
+    // === Moduud (baruun tal) ===
+    ctx.fillStyle = '#A67B5B';
+    ctx.fillRect(635,350,14,80); ctx.strokeRect(635,350,14,80);
+    ctx.fillRect(685,330,16,100); ctx.strokeRect(685,330,16,100);
+
+    ctx.fillStyle = isNight ? '#1E3A12' : '#3E6B24';
+    ctx.beginPath(); ctx.arc(642,325,38,0,Math.PI*2); ctx.fill(); ctx.stroke();
+
+    ctx.fillStyle = isNight ? '#2A4A18' : '#4A7C2A';
+    ctx.beginPath(); ctx.arc(693,295,48,0,Math.PI*2); ctx.fill(); ctx.stroke();
+
+    // === Gantshan od ===
+    ctx.fillStyle = '#B8E994';
+    ctx.globalAlpha = 0.6 + 0.4 * Math.sin(time * 3);
+    ctx.beginPath(); ctx.moveTo(720,440); ctx.lineTo(725,445); ctx.lineTo(730,440); ctx.lineTo(725,435); ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // === Buga nar ===
+    deerList.forEach(d => {
+      d.x += d.speed;
+      if (d.x > 850) d.x = -50;
+      drawDeer(d.x, d.y, d.scale, d.color);
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  function drawDeer(x, y, scale, color) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.scale(scale, scale);
+    ctx.strokeStyle = '#4A2511';
+    ctx.lineWidth   = 3;
+    ctx.lineCap     = 'round';
+    ctx.fillStyle   = color || '#C48F5A';
+
+    // Biye
+    ctx.beginPath(); ctx.ellipse(0, 0, 22, 14, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    // Tolgoi
+    ctx.beginPath(); ctx.ellipse(18, -12, 10, 8, -0.3, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    // Hoo
+    ctx.beginPath(); ctx.moveTo(10, -5); ctx.lineTo(14, -10); ctx.stroke();
+    // Hul
+    ctx.beginPath();
+    ctx.moveTo(-12, 10); ctx.lineTo(-12, 28);
+    ctx.moveTo(-4,  12); ctx.lineTo(-4,  28);
+    ctx.moveTo(6,   10); ctx.lineTo(6,   26);
+    ctx.moveTo(14,   8); ctx.lineTo(14,  24);
+    ctx.stroke();
+    // Ewergen
+    ctx.beginPath();
+    ctx.moveTo(20, -18); ctx.lineTo(16, -28);
+    ctx.moveTo(20, -18); ctx.lineTo(24, -26);
+    ctx.moveTo(22, -22); ctx.lineTo(26, -24);
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  function toggleDayNight() { isNight = !isNight; }
+  function toggleWind()     { windOn  = !windOn; }
+  function addDeer() {
+    deerList.push({
+      x: -40,
+      y: 430 + Math.random() * 20,
+      scale: 0.6 + Math.random() * 0.5,
+      speed: 0.3 + Math.random() * 0.5,
+      color: ['#C48F5A', '#8B5E3C', '#D4A574'][Math.floor(Math.random() * 3)]
+    });
+    if (deerList.length > 8) deerList.shift();
+  }
+
+  draw();
+</script>
+
+</body>
+</html>

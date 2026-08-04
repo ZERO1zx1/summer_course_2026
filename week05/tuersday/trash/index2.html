@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landscape with JS Animation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #1e293b;
+      font-family: sans-serif;
+    }
+
+    /* Үндсэн жааз */
+    .canvas {
+      position: relative;
+      width: 800px;
+      height: 450px;
+      background-color: #87ceeb;
+      border: 8px solid #3d1c06;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: background-color 1s ease;
+    }
+
+    /* Нар */
+    .sun {
+      position: absolute;
+      top: 30px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+      background-color: #ffd700;
+      border: 6px solid #3d1c06;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 5;
+      transition: transform 0.3s, background-color 1s;
+    }
+
+    .sun:hover {
+      transform: scale(1.05);
+    }
+
+    /* Уулс */
+    .mountains {
+      position: absolute;
+      bottom: 80px;
+      width: 100%;
+      height: 300px;
+    }
+
+    .mountain {
+      position: absolute;
+      bottom: 0;
+      border: 6px solid #3d1c06;
+    }
+
+    .mountain-1 {
+      left: 100px;
+      width: 250px;
+      height: 250px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background-color: #7c3aed;
+    }
+
+    .mountain-2 {
+      left: 280px;
+      width: 320px;
+      height: 300px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background-color: #6d28d9;
+    }
+
+    .mountain-3 {
+      right: 50px;
+      width: 260px;
+      height: 240px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background-color: #7c3aed;
+    }
+
+    /* Үүлс */
+    .cloud {
+      position: absolute;
+      z-index: 2;
+    }
+
+    .cloud-bubble {
+      position: absolute;
+      background: white;
+      border: 5px solid #3d1c06;
+      border-radius: 50%;
+    }
+
+    .cloud-1 { top: 40px; left: 80px; }
+    .cloud-1 .b1 { width: 70px; height: 70px; top: 0; left: 0; }
+    .cloud-1 .b2 { width: 90px; height: 60px; top: 20px; left: 40px; }
+    .cloud-1 .b3 { width: 60px; height: 60px; top: 10px; left: 100px; }
+
+    .cloud-2 { top: 100px; left: 260px; }
+    .cloud-2 .b1 { width: 60px; height: 60px; top: 0; left: 0; }
+    .cloud-2 .b2 { width: 75px; height: 50px; top: 15px; left: 35px; }
+
+    .cloud-3 { top: 50px; right: 180px; }
+    .cloud-3 .b1 { width: 80px; height: 80px; top: 10px; left: 0; }
+    .cloud-3 .b2 { width: 110px; height: 70px; top: 0; left: 30px; }
+    .cloud-3 .b3 { width: 60px; height: 60px; top: 20px; left: 110px; }
+
+    /* Толгод ба Зүлэг */
+    .hills {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 180px;
+    }
+
+    .hill {
+      position: absolute;
+      background-color: #65a30d;
+      border: 6px solid #3d1c06;
+      border-radius: 50% 50% 0 0;
+    }
+
+    .hill-1 {
+      width: 450px;
+      height: 140px;
+      left: -50px;
+      bottom: 40px;
+    }
+
+    .hill-2 {
+      width: 400px;
+      height: 130px;
+      right: -30px;
+      bottom: 40px;
+      background-color: #4d7c0f;
+    }
+
+    .foreground-grass {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #65a30d;
+      border-top: 6px solid #3d1c06;
+      z-index: 4;
+    }
+
+    /* Моднууд */
+    .tree {
+      position: absolute;
+      z-index: 3;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .tree:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    .trunk {
+      width: 24px;
+      height: 60px;
+      background-color: #854d0e;
+      border: 5px solid #3d1c06;
+      margin: 0 auto;
+    }
+
+    .leaves {
+      width: 90px;
+      height: 90px;
+      background-color: #15803d;
+      border: 5px solid #3d1c06;
+      border-radius: 50%;
+      margin-bottom: -15px;
+    }
+
+    .tree-left-1 { bottom: 50px; left: 60px; }
+    .tree-left-2 { bottom: 40px; left: 120px; transform: scale(0.8); }
+
+    .tree-right-1 { bottom: 50px; right: 60px; }
+    .tree-right-2 { bottom: 40px; right: 120px; transform: scale(0.8); }
+
+    /* Шөнийн горимд зориулсан CSS классууд */
+    .canvas.night {
+      background-color: #0f172a;
+    }
+
+    .sun.moon {
+      background-color: #f1f5f9;
+      box-shadow: 0 0 20px #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="canvas" id="sky">
+    <div class="sun" id="sunBtn" title="Дарж өдөр/шөнийг солиорой!"></div>
+
+    <div class="cloud cloud-1" id="cloud1">
+      <div class="cloud-bubble b1"></div>
+      <div class="cloud-bubble b2"></div>
+      <div class="cloud-bubble b3"></div>
+    </div>
+    
+    <div class="cloud cloud-2" id="cloud2">
+      <div class="cloud-bubble b1"></div>
+      <div class="cloud-bubble b2"></div>
+    </div>
+
+    <div class="cloud cloud-3" id="cloud3">
+      <div class="cloud-bubble b1"></div>
+      <div class="cloud-bubble b2"></div>
+      <div class="cloud-bubble b3"></div>
+    </div>
+
+    <div class="mountains">
+      <div class="mountain mountain-1"></div>
+      <div class="mountain mountain-2"></div>
+      <div class="mountain mountain-3"></div>
+    </div>
+
+    <div class="hills">
+      <div class="hill hill-1"></div>
+      <div class="hill hill-2"></div>
+    </div>
+
+    <div class="tree tree-left-1">
+      <div class="leaves"></div>
+      <div class="trunk"></div>
+    </div>
+    <div class="tree tree-left-2">
+      <div class="leaves"></div>
+      <div class="trunk"></div>
+    </div>
+
+    <div class="tree tree-right-2">
+      <div class="leaves"></div>
+      <div class="trunk"></div>
+    </div>
+    <div class="tree tree-right-1">
+      <div class="leaves"></div>
+      <div class="trunk"></div>
+    </div>
+
+    <div class="foreground-grass"></div>
+  </div>
+
+  <script>
+    const sunBtn = document.getElementById('sunBtn');
+    const sky = document.getElementById('sky');
+
+    // 1. Наран дээр дарахад өдөр/шөнө солигдох боломж
+    sunBtn.addEventListener('click', () => {
+      sky.classList.toggle('night');
+      sunBtn.classList.toggle('moon');
+    });
+
+    // 2. Үүлсийг JS ашиглан аажуухан хөдөлгөх (Animation)
+    let pos1 = 80;
+    let pos2 = 260;
+    let pos3 = 500;
+
+    function moveClouds() {
+      pos1 += 0.3;
+      pos2 += 0.2;
+      pos3 += 0.25;
+
+      if (pos1 > 800) pos1 = -150;
+      if (pos2 > 800) pos2 = -150;
+      if (pos3 > 800) pos3 = -150;
+
+      document.getElementById('cloud1').style.left = pos1 + 'px';
+      document.getElementById('cloud2').style.left = pos2 + 'px';
+      document.getElementById('cloud3').style.left = pos3 + 'px';
+
+      requestAnimationFrame(moveClouds);
+    }
+
+    // Хөдөлгөөнийг эхлүүлэх
+    moveClouds();
+  </script>
+
+</body>
+</html>

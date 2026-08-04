@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Хэвтээ чиглэлд голлуулах */
+    align-items: center;     /* Босоо чиглэлд голлуулах */
+    min-height: 100vh;       /* Дэлгэцийн бүтэн өндрийг ашиглах */
+    background-color: #f0f0f0;
+}
+
+canvas {
+    display: block;
+}
