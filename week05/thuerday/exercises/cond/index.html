@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Mouse & Conditionals - 10 Exercises</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>🎨 p5.js Mouse & Conditionals</h1>
+    <p style="text-align:center; color:#888; margin-bottom:15px;">10 дасгал - Хялбараас хүнд рүү</p>
+
+    <div class="exercise-nav">
+        <button onclick="loadExercise(1)" class="active" id="btn-1">Дасгал 1</button>
+        <button onclick="loadExercise(2)" id="btn-2">Дасгал 2</button>
+        <button onclick="loadExercise(3)" id="btn-3">Дасгал 3</button>
+        <button onclick="loadExercise(4)" id="btn-4">Дасгал 4</button>
+        <button onclick="loadExercise(5)" id="btn-5">Дасгал 5</button>
+        <button onclick="loadExercise(6)" id="btn-6">Дасгал 6</button>
+        <button onclick="loadExercise(7)" id="btn-7">Дасгал 7</button>
+        <button onclick="loadExercise(8)" id="btn-8">Дасгал 8</button>
+        <button onclick="loadExercise(9)" id="btn-9">Дасгал 9</button>
+        <button onclick="loadExercise(10)" id="btn-10">Дасгал 10</button>
+    </div>
+
+    <div class="exercise-container">
+        <div class="exercise-info" id="exercise-info">
+            <h2 id="ex-title">Дасгал 1: Зүүн ба баруун талын өнгө</h2>
+            <p class="goal" id="ex-goal">Зорилго: if / else болон mouseX ашиглах</p>
+            <p class="description" id="ex-desc">
+                Mouse зүүн талд байвал background #3498db (цэнхэр).<br>
+                Mouse баруун талд байвал background #e67e22 (улбар шар).<br>
+                Mouse-ийн байрлал дээр 50 хэмжээтэй цагаан тойрог.
+            </p>
+            <div class="concepts">
+                <strong>Сурах ойлголтууд:</strong><br>
+                <code>if</code> / <code>else</code> нөхцөл<br>
+                <code>mouseX</code> - mouse-ийн X байрлал<br>
+                <code>width</code> - canvas-ийн өргөн
+            </div>
+        </div>
+
+        <div id="canvas-container"></div>
+
+        <div class="code-section">
+            <h3>📜 Кодыг харах</h3>
+            <pre id="code-display"></pre>
+        </div>
+    </div>
+
+    <div class="footer">
+        p5.js Mouse Events & Conditionals | Сурагчийн гарын авлага
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

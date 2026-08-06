@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<h3>Дасгал 1</h3>
+<div id="sketch1"></div>
+<h3>Дасгал 2</h3>
+<div id="sketch2"></div>
+<h3>Дасгал 3</h3>
+<div id="sketch3"></div>
+
+<script>
+// ========== Дасгал 1 ==========
+let circleX1, circleY1;
+const size1 = 80;
+const color1 = "#3498db";
+
+function sketch1(p) {
+  p.setup = function() {
+    p.createCanvas(300, 200).parent("sketch1");
+  };
+  p.draw = function() {
+    p.background("#f5f5f5");
+    p.fill(color1);
+    p.noStroke();
+    p.circle(p.mouseX, p.mouseY, size1);
+  };
+}
+new p5(sketch1);
+
+// ========== Дасгал 2 ==========
+let circleX2 = 150, circleY2 = 100, size2 = 70;
+let r2 = 255, g2 = 100, b2 = 50;
+
+function sketch2(p) {
+  p.setup = function() {
+    p.createCanvas(300, 200).parent("sketch2");
+  };
+  p.draw = function() {
+    p.background("#f5f5f5");
+    p.fill(r2, g2, b2);
+    p.noStroke();
+    p.circle(circleX2, circleY2, size2);
+  };
+  p.mousePressed = function() {
+    circleX2 = p.mouseX;
+    circleY2 = p.mouseY;
+  };
+}
+new p5(sketch2);
+
+// ========== Дасгал 3 ==========
+let faceX3, faceY3;
+const faceSize3 = 120, eyeSize3 = 15, eyeDist3 = 25, eyeY3 = 20, mouthW3 = 50;
+
+function sketch3(p) {
+  p.setup = function() {
+    p.createCanvas(300, 200).parent("sketch3");
+  };
+  p.draw = function() {
+    faceX3 = p.mouseX;
+    faceY3 = p.mouseY;
+    p.background("#f5f5f5");
+    
+    p.fill("#FFD700");
+    p.noStroke();
+    p.circle(faceX3, faceY3, faceSize3);
+    
+    p.fill(0);
+    p.circle(faceX3 - eyeDist3, faceY3 - eyeY3, eyeSize3);
+    p.circle(faceX3 + eyeDist3, faceY3 - eyeY3, eyeSize3);
+    
+    p.stroke(0);
+    p.strokeWeight(2);
+    p.line(faceX3 - mouthW3/2, faceY3 + 15, faceX3 + mouthW3/2, faceY3 + 15);
+  };
+}
+new p5(sketch3);
+</script>
+</body>
+</html>
