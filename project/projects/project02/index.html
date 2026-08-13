@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZERO1zx1 - Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">ZERO1zx1</a>
+
+      <!-- Language switcher -->
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="mn">MN</button>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#home" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 class="hero-name">ZERO1zx1</h1>
+      <h2 class="hero-title" data-i18n="hero_title">Web Developer</h2>
+      <p class="hero-desc" data-i18n="hero_desc">
+        I create simple and useful websites using HTML, CSS and JavaScript.
+      </p>
+      <a href="#projects" class="btn" data-i18n="hero_btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about_title">About Me</h2>
+      <div class="about-content">
+        <p data-i18n="about_p1">
+          Hi! My name is ZERO1zx1. I've been learning to code for about 2 years.
+          I enjoy building websites and learning new things every day.
+        </p>
+        <p data-i18n="about_p2">
+          Right now I'm focused on improving my skills in HTML, CSS and JavaScript.
+          I want to create websites that are fast, clean and easy to use.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="skills_title">My Skills</h2>
+      <div class="skills-grid" id="skills-grid">
+        <!-- Skills added by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="projects_title">My Projects</h2>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Projects added by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-box">
+      <h2 class="section-title" data-i18n="contact_title">Contact Me</h2>
+      <p class="contact-desc" data-i18n="contact_desc">
+        If you have a question or just want to say hi, feel free to send me a message.
+      </p>
+      <a href="mailto:zero1zx1@gmail.com" class="btn" data-i18n="contact_btn">Send Email</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> ZERO1zx1. <span data-i18n="footer_rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
