@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Дасгал 10 — Scene Engine v1 Mini Project</title>
+  <script src="./js/p5.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Дасгал 10 — Scene Engine v1 Mini Project</h1>
+
+  <h2>Өөрийн artPlan</h2>
+  <pre>
+const artPlan = {
+  title: "Neon Night",
+  background: "#0a0a1a",
+  palette: ["#00ff88", "#00ccff", "#ff00ff"],
+  shape: "square",
+  count: 18,
+  speed: 2.0
+};
+  </pre>
+
+  <h2>Scene build</h2>
+  <p>• <code>buildScene(plan)</code> ашиглана</p>
+  <p>• <code>plan.count</code> particle-ийн тоог удирдана</p>
+  <p>• <code>plan.speed</code> хурдыг удирдана</p>
+  <p>• <code>plan.palette</code>-ээс random өнгө сонгогдоно</p>
+
+  <h2>Update</h2>
+  <p>• particle x чиглэлд хөдөлнө</p>
+  <p>• particle y чиглэлд хөдөлнө</p>
+  <p>• canvas-ийн захад хүрэхэд чиглэлээ солино</p>
+
+  <h2>Render</h2>
+  <p>• <code>"circle"</code> ажиллана</p>
+  <p>• <code>"square"</code> ажиллана</p>
+
+  <h2>Interaction</h2>
+  <p>• Mouse дарахад scene дахин build хийгдэнэ</p>
+
+  <h2>Visualization</h2>
+  <p>Доорх canvas дээр "Neon Night" scene харагдаж байна.</p>
+  <p><em>Mouse дарж scene-ийг дахин build хийж болно.</em></p>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

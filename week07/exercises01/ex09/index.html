@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Дасгал 9 — Mouse дарахад Plan-ийн өгөгдөл өөрчлөх</title>
+  <script src="./js/p5.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Дасгал 9 — Mouse дарахад Plan-ийн өгөгдөл өөрчлөх</h1>
+
+  <h2>Хариулт</h2>
+  <p>Би <code>count</code> property-г сонгосон. Mouse дарахад count-ийг өөрчилж, дараа нь <code>buildScene(artPlan)</code> дахин ажиллуулна.</p>
+
+  <pre>
+function mousePressed() {
+  // count-ийг 5-20 хооронд санамсаргүй өөрчилнө
+  artPlan.count = random(5, 20);
+  buildScene(artPlan);
+}
+  </pre>
+
+  <h2>Flow</h2>
+  <pre>
+mousePressed
+    ↓
+artPlan-ийн property өөрчлөгдөнө
+    ↓
+buildScene()
+    ↓
+шинэ particles үүснэ
+  </pre>
+
+  <h2>Canvas дээр юу өөрчлөгдөж байна вэ?</h2>
+  <p>→ Mouse дарах бүрд <code>count</code> өөрчлөгдөж, <code>buildScene()</code> шинэ тооны particle үүсгэнэ. Тиймээс canvas дээрх particle-ийн тоо өөрчлөгдөнө.</p>
+
+  <h2>Visualization</h2>
+  <p>Доорх canvas дээр mouse дарж <code>count</code>-ийг өөрчилж болно.</p>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

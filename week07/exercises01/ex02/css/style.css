@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  padding: 20px;
+}
+
+h1 { color: #f9a825; }
+h2 { color: #ffd54f; }
+
+pre {
+  background: #16213e;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.rule {
+  background: #3e2723;
+  border-left: 4px solid #f9a825;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #f9a825;
+}

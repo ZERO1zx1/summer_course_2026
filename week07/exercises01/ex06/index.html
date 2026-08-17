@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Дасгал 6 — Shape Renderer</title>
+  <script src="./js/p5.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Дасгал 6 — Shape Renderer</h1>
+
+  <pre>
+function drawParticle(particle, shape) {
+  noStroke();
+  fill(particle.color);
+  if (shape === "square") {
+    rectMode(CENTER);
+    square(particle.x, particle.y, particle.size);
+  } else {
+    circle(particle.x, particle.y, particle.size);
+  }
+}
+  </pre>
+
+  <h2>Гаралтууд</h2>
+  <p><strong>Plan A</strong> — shape: "circle"</p>
+  <p>→ <strong>Дугуй (circle) зурна</strong></p>
+
+  <p><strong>Plan B</strong> — shape: "square"</p>
+  <p>→ <strong>Дөрвөлжин (square) зурна</strong></p>
+
+  <p><strong>Plan C</strong> — shape: "triangle"</p>
+  <p>→ <strong>Дугуй (circle) зурна — else хэсэг ажиллана</strong></p>
+
+  <h2>Асуулт</h2>
+  <p><strong>Яагаад "triangle" үед error гарахгүй байгаа вэ?</strong></p>
+  <p>→ Учир нь <code>if (shape === "square")</code> нь зөвхөн "square" үед шалгагдана. Бусад бүх утга (triangle, circle, бусад) нь <code>else</code> хэсэгт орж <code>circle()</code> зурна. Тиймээс error гарахгүй, зүгээр л дугуй зурна.</p>
+
+  <h2>Visualization</h2>
+  <p>Доорх canvas дээр <code>shape: "circle"</code> гэсэн утгатай renderer ажиллаж байна.</p>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Дасгал 5 — Debug: Яагаад particle хөдөлсөнгүй вэ?</title>
+  <script src="./js/p5.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Дасгал 5 — Debug: Яагаад particle хөдөлсөнгүй вэ?</h1>
+
+  <h2>Алдаатай код</h2>
+  <pre>
+function updateParticle(particle) {
+  particle.x + particle.vx;
+  particle.y + particle.vy;
+}
+  </pre>
+
+  <h2>Хариултууд</h2>
+  <p><strong>1. Алдаатай хоёр мөр:</strong></p>
+  <p>→ <code>particle.x + particle.vx;</code> — үр дүнг хадгалахгүй байна</p>
+  <p>→ <code>particle.y + particle.vy;</code> — үр дүнг хадгалахгүй байна</p>
+
+  <p><strong>2. Зөв хувилбар:</strong></p>
+  <pre>
+function updateParticle(particle) {
+  particle.x += particle.vx;
+  particle.y += particle.vy;
+}
+  </pre>
+
+  <p><strong>3. Яагаад анхны код хөдөлгөөн үүсгээгүй вэ?</strong></p>
+  <p>→ Тооцоолсон шинэ утга нь property-д буцааж хадгалагдахгүй байгаа тул particle-ийн x, y утга өөрчлөгдөхгүй.</p>
+
+  <h2>Visualization</h2>
+  <p>Доорх canvas дээр зөв засагдсан updateParticle() ажиллаж байна.</p>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

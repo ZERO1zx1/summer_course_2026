@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Дасгал 8 — Mouse дарахад scene reset хийх</title>
+  <script src="./js/p5.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Дасгал 8 — Mouse дарахад scene reset хийх</h1>
+
+  <h2>Хариулт</h2>
+  <pre>
+function mousePressed() {
+  buildScene(artPlan);
+}
+  </pre>
+
+  <h2>Шалгах</h2>
+  <p>• particle-ийн байрлал өөрчлөгдөнө ✓</p>
+  <p>• size өөрчлөгдөж болно ✓</p>
+  <p>• color өөрчлөгдөж болно ✓</p>
+  <p>• particle-ийн тоо өөрчлөгдөхгүй ✓</p>
+
+  <h2>Асуулт</h2>
+  <p><strong>Яагаад particle-ийн тоо хэвээр үлдэж байна вэ?</strong></p>
+  <p>→ Учир нь <code>buildScene(artPlan)</code> нь <code>plan.count</code>-ийн утгаар л particle үүсгэдэг. <code>artPlan.count</code> өөрчлөгдөөгүй тул ижил тооны particle үүснэ. Зөвхөн байрлал, size, color нь <code>random()</code>-оор шинэ утга авдаг.</p>
+
+  <h2>Visualization</h2>
+  <p>Доорх canvas дээр mouse дарж scene-ийг reset хийж болно.</p>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

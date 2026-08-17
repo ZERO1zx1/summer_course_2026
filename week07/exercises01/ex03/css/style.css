@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  padding: 20px;
+}
+
+h1 { color: #4ade80; }
+h2 { color: #86efac; }
+
+pre {
+  background: #16213e;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.question {
+  background: #14532d;
+  border-left: 4px solid #4ade80;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #4ade80;
+}

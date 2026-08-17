@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Дасгал 3 — buildScene()-ийг урьдчилан таа</title>
+  <script src="./js/p5.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Дасгал 3 — buildScene()-ийг урьдчилан таа</h1>
+  <p>Доорх <code>buildScene()</code> function-ийг судалж, асуултуудад хариулна уу.</p>
+
+  <pre>
+function buildScene(plan) {
+  particles = [];
+  for (let i = 0; i < plan.count; i++) {
+    particles.push({
+      x: random(width),
+      y: random(height),
+      size: random(20, 55),
+      vx: random(-plan.speed, plan.speed),
+      vy: random(-plan.speed, plan.speed),
+      color: random(plan.palette)
+    });
+  }
+}
+  </pre>
+
+  <h2>Асуултууд ба Хариултууд</h2>
+
+  <div class="question">
+    <p><strong>1. count: 5 бол particles.length = ______</strong></p>
+    <p>→ <strong>5</strong></p>
+    <p>Тайлбар: <code>for</code> loop нь <code>i = 0</code>-ээс <code>i < 5</code> хүртэл 5 удаа ажиллаж, 5 particle push хийнэ.</p>
+  </div>
+
+  <div class="question">
+    <p><strong>2. count: 20 бол particles.length = ______</strong></p>
+    <p>→ <strong>20</strong></p>
+    <p>Тайлбар: <code>for</code> loop нь <code>i = 0</code>-ээс <code>i < 20</code> хүртэл 20 удаа ажиллаж, 20 particle push хийнэ.</p>
+  </div>
+
+  <div class="question">
+    <p><strong>3. speed: 0 бол vx = ______, vy = ______</strong></p>
+    <p>→ <strong>vx = 0, vy = 0</strong></p>
+    <p>Тайлбар: <code>random(-0, 0)</code> нь үргэлж 0 буцаана. Тиймээс particle хөдөлдөггүй.</p>
+  </div>
+
+  <div class="question">
+    <p><strong>4. speed: 3 бол vx ямар range-аас утга авах вэ? ______ - ______</strong></p>
+    <p>→ <strong>-3 - 3</strong></p>
+    <p>Тайлбар: <code>random(-3, 3)</code> нь -3-аас 3 хүртэлх утга авах боломжтой.</p>
+  </div>
+
+  <div class="question">
+    <p><strong>5. Яагаад function-ийн эхэнд particles = []; гэж бичсэн бэ?</strong></p>
+    <p>→ <strong>Хуучин particle-уудыг устгаж, шинэ scene-ийг цэвэрхэн эхлүүлэхэд зориулагдсан.</strong></p>
+    <p>Тайлбар: Хэрэв <code>particles = []</code> гэж бичихгүй бол, өмнөх buildScene() дуудлагаас үлдсэн particle-ууд шинэ particle-уудтай нийлж, тоо нь давхардана.</p>
+  </div>
+
+  <h2>Visualization</h2>
+  <p>Доорх canvas дээр <code>count: 12</code>, <code>speed: 1.5</code> гэсэн утгатай buildScene() ажиллаж байна.</p>
+  <p><em>Mouse дарж scene-ийг дахин build хийж болно.</em></p>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
